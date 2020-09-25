@@ -1,5 +1,8 @@
- /*
-*  Angela Noble - project 2
+/*
+* Project: NASA Expoplanet Archive
+* Name: Angela Noble
+* Date Created: November 10, 2018
+* Last Date Modified: December 11, 2018
 */
 
 PImage i1;
@@ -21,7 +24,7 @@ boolean transit = true;
 boolean imaging = false;
 boolean other = true;
 
-float[] randoms = new float[3837]; // random numbers fo rthe angles
+float[] randoms = new float[3837]; // random numbers for the angles
 
 
 Range range;  // defining a variable of type Range
@@ -52,7 +55,7 @@ int total; // for total number callout
 PFont myFont;
 
 void setup() {
-    size(1200, 730);
+    size(1200, 730); // creating GUI size
     
     myFont=createFont("Montserrat-Medium-14.vlw", 14);
     textFont(myFont);
@@ -60,7 +63,7 @@ void setup() {
     originX = width/2;
     originY = height/2;
    
-    data = loadTable("p2-edited.csv", "header");
+    data = loadTable("p2-edited.csv", "header"); // NASA's exoplanet archive table
     rowCount = data.getRowCount();
     println(rowCount);
     textAlign(CENTER);
@@ -157,8 +160,6 @@ void setup() {
                          
                 
 } // close setup
-
-
 
 
 void draw() {
